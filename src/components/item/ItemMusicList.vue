@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="musicItem" v-for="(item,index) in musicList" :key="index">
-      <div class="musicItemLeft">
+      <div class="musicItemLeft" @click="playMusic(index)">
         <span>{{index + 1}}</span>
         <div class="song">
           <span class="songName">{{item.name}}</span>
@@ -36,12 +36,22 @@
 </template>
 
 <script>
+import {mapMutations} from "vuex";
+
 export default {
   name: "ItemMusicList",
   setup(props){
     console.log(props)
   },
-  props:['musicList','subscribedCount']
+  props:['musicList','subscribedCount'],
+  methods:{
+    playMusic:function (index){
+      console.log(this.musicList[0].name)
+      this.updatePlayList(this.musicList)
+      this.updatePlayListIndex(index)
+    },
+        ...mapMutations(['updatePlayList','updatePlayListIndex'])
+  }
 }
 </script>
 
