@@ -62,6 +62,7 @@ export default {
   border-top-right-radius: 0.4rem;
   background: white;
   margin-top: 10px;
+  padding-bottom: 1.4rem;
   .top{
     display: flex;
     justify-content: space-between;

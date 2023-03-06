@@ -56,8 +56,8 @@ export default {
 <style lang="less" scoped>
 .musicList{
   width: 100%;
-  height: 5rem;
   padding: 0.2rem;
+  padding-bottom: 2rem;
   .musicTop{
     width: 100%;
     height: 0.6rem;

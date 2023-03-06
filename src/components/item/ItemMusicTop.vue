@@ -25,8 +25,7 @@
         <img :src="playlist.creator.avatarUrl" alt="">
         <span>{{playlist.creator.nickname}}</span>
       </div>
-
-      <span>{{playlist.description}}</span>
+      <span class="musicDes">{{playlist.description}}</span>
     </div>
   </div>
   <div class="iconList">
@@ -119,9 +118,15 @@ export default {
       color: white;
       font-weight: 900;
     }
+    .musicDes{
+      width: 100%;
+      height: 70px;
+      overflow: hidden;
+    }
     .creator{
       width: 100%;
       margin-top: 10px;
+
 
       span{
         display: inline-block;
