@@ -13,3 +13,9 @@ export function getMusicList(){
         url:'/personalized?limit=10'
     })
 }
+export function getSearchMusic(keywords){
+    return service({
+        method:'get',
+        url:`/cloudsearch?keywords=${keywords}`
+    })
+}

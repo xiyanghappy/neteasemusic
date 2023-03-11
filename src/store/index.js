@@ -20,6 +20,8 @@ export default createStore({
       lyricList:{},
       currentTime:0, ///当前播放时间
       duration:0,   //歌曲总时长
+      isLogin:false, //登录状态
+      isFooterMusic:true    //判断底部组件是否显示
 
   },
   getters: {
@@ -45,6 +47,12 @@ export default createStore({
       },
       updateDuration:function (state,value){
           state.duration = value
+      },
+      pushPlayList:function (state,value){
+          state.playList.push(value)
+      },
+      updateIsLogin:function (state,value){
+          state.isLogin = value
       }
   },
   actions: {
